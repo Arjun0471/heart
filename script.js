@@ -2,9 +2,9 @@ const backToTopBtn = document.getElementById("backToTop");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
-    backToTopBtn.style.display = "block";
+    backToTopBtn.classList.add("show");
   } else {
-    backToTopBtn.style.display = "none";
+    backToTopBtn.classList.remove("show");
   }
 });
 

@@ -155,16 +155,32 @@ body {
   background-color: #c62828;
   color: white;
   border: none;
-  padding: 0.6rem 1rem;
+  padding: 0.7rem;
   border-radius: 50%;
-  font-size: 1.2rem;
   cursor: pointer;
-  display: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.2s ease;
+}
+
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 #backToTop:hover {
   background-color: #a61818;
-  transform: scale(1.1);
+  transform: translateY(0) scale(1.1);
 }
+
+.chevron-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  stroke: white;
+}
+
+
 
