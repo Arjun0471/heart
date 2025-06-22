@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
-
   <link rel="icon" type="image/png" href="assets/heart.png" />
-  <title>Paediatric Cardiac</title>
+  <title>Child Heart Disease</title>
 </head>
 <body>
-  <header class="navbar1">
-    <nav class="socialmedialinks">
-      <a href="https://www.youtube.com/@swatigarekar/" target="_blank" aria-label="YouTube">
-        <img src="assets/YouTube_full-color_icon_(2017).svg" alt="YouTube" style="width:18px;height:18px;" />
-      </a>
-      <a href="https://facebook.com/swati.garekar" target="_blank" aria-label="Facebook">
-        <img src="assets/2023_Facebook_icon.svg" alt="Facebook" style="width:18px;height:18px;" />
-      </a>
-    </nav>
-  </header>
 
-  <header class="navbar2">
-    <div class="logo">Child Heart</div>
+  <div id="google_translate_element" style="position:fixed;top:10px;right:10px;z-index:9999;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,mr,fr,gu,kn,ml,ta,te,bn,pa,or,as,ar',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <header class="navbar">
+    <div class="logo">Child Heart Disease</div>
     <nav class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="conditions.html">Conditions</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" class="active pagechange">Home</a>
+      <a href="about.html" class = "pagechange">About Me</a>
+      <a href="conditions.html" class="pagechange">Conditions</a>
+      <a href="contact.html" class="pagechange">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-content">
-        <h1>Understanding Pediatric Heart Conditions</h1>
-        <p>Did you know that heart defects are the most common kinds of birth defects - <strong>one in every hundred newborns</strong> have them. A hole in the heart or other such heart defects by birth can be treated and children can have a normal life.</p>
-        <a href="#what" class="cta-button">Learn More</a>
+        <h1>Heart defects are the most common kinds of birth defects - <strong>one in every 100 newborns</strong> have them.<br><br>A hole in the heart or other such heart defects by birth can be treated and children can have a normal life.</h1><br>
+        <a href="#what" class="cta-button">Tell Me More</a>
       </div>
     </section>
 
@@ -45,7 +46,7 @@
       <p>Congenital heart defects (CHDs) are the most common birth anomalies in children globally.</p>
       <ul class="stat-list">
         <li>1 in every 100 children worldwide is born with a CHD — that's around <strong>4.18 million</strong> children under five globally in 2021.</li>
-        <li>About <strong>40,000 babies per year</strong> in the U.S. have CHDs—roughly one every 15 minutes.</li>
+        <li>About <strong>13.5 lakh babies per year</strong> are born with CHDs globally.</li>
         <li>Globally, critical heart defects make up nearly 25% of all CHDs.</li>
       </ul>
     </section>
@@ -134,7 +135,12 @@
   </button>
 
   <footer class="footer">
-    <p>&copy; 2025 Pediatric Cardiology Info Site. All rights reserved.</p>
+    <a href="https://www.youtube.com/@swatigarekar/" class="socialmedialinks" target="_blank" aria-label="YouTube">
+      <img src="assets/YouTube_full-color_icon_(2017).svg" alt="YouTube" style="width:30px;height:30px;" />
+    </a>
+    <a href="https://facebook.com/swati.garekar" class="socialmedialinks" target=_blank" aria-label="Facebook">
+      <img src="assets/2023_Facebook_icon.svg" alt="Facebook" style="width:30px;height:30px;" />
+    </a>
   </footer>
   <script src="script.js"></script>
 </body>

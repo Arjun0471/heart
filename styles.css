@@ -11,25 +11,28 @@ body {
   line-height: 1.6;
 }
 
-.navbar1 {
-  background-color: #f0f0f0;
-  padding: 0.5rem 1rem;
-  display: flex;
-  justify-content: flex-end;
-  border-bottom: 1px solid #ccc;
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
-.socialmedialinks a {
-  margin-left: 1rem;
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.socialmedialinks {
+  padding: 0.2rem 0.2rem;
+  margin-left: 1vw;
   display: inline-block;
   transition: transform 0.2s ease;
 }
 
-.socialmedialinks a:hover {
+.socialmedialinks:hover {
   transform: scale(1.2);
 }
 
-.navbar2 {
+.navbar {
   background-color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -61,12 +64,12 @@ body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.nav-links a:hover {
+.pagechange:hover {
   background-color: #fdeaea;
   color: #a61818
 }
 
-.nav-links a.active {
+.pagechange.active {
   background-color: #c62828;
   color: white;
 }
@@ -81,7 +84,7 @@ body {
 .info-section,
 .stat-list,
 .symptom-list {
-  max-width: 800px;
+  max-width: 80vw;
   margin: 0 auto;
   padding: 2rem 1rem;
   text-align: left;
@@ -90,7 +93,6 @@ body {
 .stat-list li {
   margin: 0.5rem 0;
 }
-
 
 .hero h1 {
   font-size: 2.5rem;
@@ -123,7 +125,7 @@ body {
   height: 4px;
   background-color: #f8d7da; /* soft red */
   margin: 4rem auto;
-  max-width: 200px;
+  max-width: 60vw;
   border-radius: 2px;
 }
 
@@ -139,12 +141,16 @@ body {
 }
 
 .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   text-align: center;
-  padding: 1rem;
+  padding: 0.2rem;
   background-color: #f4f4f4;
   font-size: 0.9rem;
   color: #555;
-  margin-top: 4rem;
+  /* Remove margin-top to avoid unwanted spacing */
 }
 
 #backToTop {
@@ -168,6 +174,7 @@ body {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+  animation: bounceUp 0.4s ease;
 }
 
 #backToTop:hover {
@@ -182,5 +189,112 @@ body {
   stroke: white;
 }
 
+@keyframes bounceUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
 
+@media (max-width: 768px) {
 
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .hero {
+    padding: 2.5rem 1rem;
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: 1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .info-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .info-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .info-section p,
+  .symptom-list li,
+  .stat-list li {
+    font-size: 0.95rem;
+  }
+
+  .divider {
+    margin: 3rem auto;
+  }
+
+  #backToTop {
+    bottom: 20px;
+    right: 20px;
+    padding: 0.6rem;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-form button {
+  width: fit-content;
+  padding: 0.75rem 1.5rem;
+  background-color: #c62828;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #a61818;
+}
+
+main {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.about-text {
+  font-size: large;
+}
+
+.about-title {
+  color:#c62828;
+}
