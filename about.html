@@ -8,11 +8,12 @@
   <title>Child Heart Disease</title>
 </head>
 <body>
-  <header class="navbar">
+
+  <header class="navbar" style="display: flex; align-items: center; justify-content: space-between;">
     <div class="logo">Child Heart Disease</div>
     <nav class="nav-links">
       <a href="index.html" class="pagechange">Home</a>
-      <a href="about.html" class = "active pagechange">About Me</a>
+      <a href="about.html" class="active pagechange">About Me</a>
       <a href="conditions.html" class="pagechange">Conditions</a>
       <a href="contact.html" class="pagechange">Contact</a>
       <a href="https://www.youtube.com/@swatigarekar/" class="socialmedialinks" target="_blank" aria-label="YouTube">
@@ -22,7 +23,18 @@
         <img src="assets/2023_Facebook_icon.svg" alt="Facebook" style="width:30px;height:30px;" />
       </a>
     </nav>
+    <div id="google_translate_element" style="margin-left: 20px;"></div>
   </header>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,mr,fr,gu,kn,ml,ta,te,bn,pa,or,as,ar',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <main>
     <section class="about-section">
