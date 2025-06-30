@@ -40,6 +40,10 @@
   .contact-form textarea {
     max-width: 100%;
   }
+  main {
+    padding: 12px 4vw;
+    font-size: 1rem;
+  }
 }
 
 .nav-links {
@@ -329,9 +333,36 @@ html {
 }
 
 main {
-  max-width: 90vw;
+  max-width: 900px;
   margin: 0 auto;
+  margin: 40px auto 0 auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #222;
 }
+
+.condition details {
+    margin-bottom: 18px;
+    background: #f7fafc;
+    border-radius: 8px;
+    padding: 14px 18px;
+    border: 1px solid #e2e8f0;
+  }
+.condition summary {
+    font-size: 1.13rem;
+    cursor: pointer;
+    outline: none;
+  }
+.condition ul {
+    margin: 10px 0 10px 24px;
+  }
+.condition li {
+    margin-bottom: 7px;
+  }
 
 .about-text {
   font-size: large;
