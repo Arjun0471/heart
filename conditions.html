@@ -14,7 +14,7 @@
       <div id="google_translate_element" class="translate" style="margin-left: 20px;"></div>
       <a href="index.html" class="pagechange">Home</a>
       <a href="about.html" class="pagechange">About Me</a>
-      <a href="conditions.html" class="active pagechange">Conditions</a>
+      <a href="conditions.html" class="active pagechange">Heart Defects</a>
       <a href="contact.html" class="pagechange">Contact</a>
     </nav>
   </header>
@@ -30,13 +30,55 @@
   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <main>
+    <div style="margin: 24px 0;">
+      <label for="conditionSelect"><strong>Jump to Heart Condition:</strong></label>
+      <select id="conditionSelect">
+        <option value="">-- Select a condition --</option>
+        <option value="vsd">Ventricular Septal Defect (VSD)</option>
+        <option value="tof">Tetralogy of Fallot (TOF)</option>
+        <option value="ph">Pulmonary Hypertension (PH)</option>
+        <option value="asd">Atrial Septal Defects (ASD)</option>
+        <option value="truncus">Truncus Arteriosus</option>
+        <option value="coarctation">Coarctation of Aorta</option>
+        <option value="singleventricle">Single Ventricle Defect</option>
+      </select>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const sectionIds = [
+          "vsd",
+          "tof",
+          "ph",
+          "asd",
+          "truncus",
+          "coarctation",
+          "singleventricle"
+        ];
+        document.querySelectorAll('.condition').forEach((section, idx) => {
+          section.id = sectionIds[idx];
+        });
+
+        document.getElementById('conditionSelect').addEventListener('change', function () {
+          const selected = this.value;
+          document.querySelectorAll('.condition').forEach(section => {
+            const details = section.querySelector(':scope > details');
+            if (section.id === selected && selected) {
+              details.open = true;
+              section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else if (details) {
+              details.open = false;
+            }
+          });
+        });
+      });
+    </script>
     <section class="condition">
-      <details open>
+      <details>
         <summary><strong>Ventricular septal defect (VSD)</strong></summary>
         <p>
           A VSD is a hole in the wall that separates the ventricles or the lower chambers of the heart. 
           A VSD may occur in isolation or along with other defects in the heart. What happens to the baby then depends on the vsd AND the associated defects.
-          This article deals with an isolated VSD. 
+          This post deals with an isolated VSD. 
           It is a congenital heart defect that is present at birth. Over time, in some babies, this hole closes by itself. Once a VSD is closed (by itself or with surgery), the baby has a totally normal life like any other child.
         </p>
         <details>
@@ -56,11 +98,22 @@
         </details>
         <details>
           <summary><strong>How blood flows in a heart with a VSD</strong></summary>
-          <p>
-            To understand VSD better, it is important to know how the normal heart works. See figure 1 below (figure of normal heart). The left heart has 2 chambers and the right heart has 2 chambers. The top 2 chambers (RA and LA) are the collecting chambers while the bottom 2 chambers (RV and LV) are pumping chambers. Pure blood is pumped by the LV to the whole body. The body’s organs uses the oxygen in that blood and makes the blood impure. The impure blood returns to the RA and is pumped by the RV to the lungs. When we breathe, the oxygen in our breath enters the blood and makes it pure again. The pure blood enters LA and is pumped out to the body by the LV. 
-            Thus the heart supports 2 circuits. The left circuit pumps pure blood to the body and the right circuit pumps impure blood to the lungs.  
-            In a child with a VSD, the wall  (SEPTUM) between the LV and the RV has a hole in it. So blood flows from the LV to the RV and then to the lungs. This means extra blood ends up going to the lungs. The congested lungs get infected relatively easily. Also, the LA and LV become bigger in size and pressure in the lung arteries also rises (pulmonary hypertension).
-          </p>
+          <ul>
+            <li>To understand VSD better, it is important to know how the normal heart works. See figure 1 below (figure of normal heart).</li> 
+            <li>The left heart has 2 chambers and the right heart has 2 chambers.</li> 
+            <li>The top 2 chambers (RA and LA) are the collecting chambers while the bottom 2 chambers (RV and LV) are pumping chambers.</li> 
+            <li>Pure blood is pumped by the LV to the whole body.</li>
+            <li>The body’s organs uses the oxygen in that blood and makes the blood impure.</li> 
+            <li>The impure blood returns to the RA and is pumped by the RV to the lungs.</li> 
+            <li>When we breathe, the oxygen in our breath enters the blood and makes it pure again.</li> 
+            <li>The pure blood enters LA and is pumped out to the body by the LV.</li>
+            <li>Thus the heart supports 2 circuits. </li>
+            <li>The left circuit pumps pure blood to the body and the right circuit pumps impure blood to the lungs.</li>
+            <li>In a child with a VSD, the wall  (SEPTUM) between the LV and the RV has a hole in it.</li> 
+            <li>So blood flows from the LV to the RV and then to the lungs.</li> 
+            <li>This means extra blood ends up going to the lungs. The congested lungs get infected relatively easily. </li>
+            <li>Also, the LA and LV become bigger in size and pressure in the lung arteries also rises (pulmonary hypertension).</li>
+          </ul>
         </details>
         <details>
           <summary><strong>Types of VSDs</strong></summary>
@@ -126,7 +179,7 @@
     </section>
 
     <section class="condition">
-      <details open>
+      <details>
         <summary><strong>Tetralogy of Fallot (TOF)</strong></summary>
         <p>
           TOF is a major congenital heart defect consisting of four abnormalities. It leads to a bluish tinge (cyanosis) of the lips and nails, especially when walking or crying. The defect worsens with time and needs surgical correction ideally between 6 months and 1 year of age. Children do very well after repair, with good quality and quantity of life.
@@ -215,7 +268,7 @@
     </section>
 
     <section class="condition">
-      <details open>
+      <details>
         <summary><strong>Pulmonary Hypertension (PH)</strong></summary>
         <p>
           Pulmonary hypertension  (PH) is a condition where the lung artery pressure is abnormally high.  The normal lung artery pressure is 1/4th or less of the BP that is measured in our arm. 
@@ -334,7 +387,7 @@
       </details>
     </section>
     <section class="condition">
-      <details open>
+      <details>
         <summary><strong>Atrial Septal Defects (ASD)</strong></summary>
 
         <p>An atrial septal defect is a hole in the wall that separates the atria or the upper chambers of the heart. </p>
@@ -425,7 +478,7 @@
       </details>
     </section>
     <section class="condition">
-      <details open>
+      <details>
         <summary><strong>Truncus Arteriosus</strong></summary>
 
         <p>Truncus arteriosus is a rare congenital heart defect. </p>
@@ -516,7 +569,7 @@
       </details>
     </section>
     <section class="condition">
-      <details open>
+      <details>
         <summary><strong>Coarctation of Aorta</strong></summary>
 
         <p>Coarctation of the aorta is a heart defect present at birth. In this condition, there is a constriction or narrowing in the aorta, which is the main artery supplying blood to the entire body. It thus prevents the proper flow of blood from the heart to lower parts of the body as the narrowing is 99% of the time just after branches to the upper parts of the body are given off.</p>
@@ -602,7 +655,7 @@
     </section>
 
     <section class="condition">
-      <details open>
+      <details>
         <summary><strong>Single Ventricle Defect</strong></summary>
 
         <p>Heart defects in children are of many types. Amongst the complex ones, the single ventricles are common. In these kind of heart defects, the heart is malformed such that there is mixing of pure and impure blood inside the heart and the same blood is pumped to the whole body. In addition, the flow to the lungs may be less or much more than normal.</p>
